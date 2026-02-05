@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a href="/new"> new message</a>
+    <div>
+        <% messages.forEach((message, index) => { %>
+            <p><%= message.user %></p>
+            <p><%= message.text %></p>
+            <p><%= message.added %></p>
+            <a href="/message-details/<%= index %>">Open</a>
+          <% }) %>
+    </div>
+
+
+
+
+
+  </body>
+</html>
